@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="menu_how">How to open the private vault</string>
+    <string name="menu_setup_pin">Set up vault PIN</string>
+    <string name="menu_privacy">Privacy information</string>
+    <string name="menu_theme">Change theme</string>
+    <string name="how_title">Private vault</string>
+    <string name="how_body">1. Create a PIN: open the menu (three dots, top right) and choose Set up vault PIN. A PIN has 4 to 8 digits.\n\n2. Open the vault: type your PIN on the calculator keypad and press the = button.\n\n3. The vault locks automatically when you leave it, switch to another app, or the screen turns off. Use the Lock button inside the vault to lock it immediately.\n\nAny 4 to 8 digit number followed by = counts as a PIN try. After 5 wrong tries the vault is blocked for a short time. The calculator itself keeps working normally.\n\nIf you forget your PIN there is no recovery. Clearing app data or uninstalling the app permanently deletes everything in the vault.</string>
+
+    <string name="vault_title">Private vault</string>
+    <string name="vault_intro">The vault is unlocked. It locks automatically when you leave it.</string>
+    <string name="files_title">Private files</string>
+    <string name="files_note">Imported files are copied and encrypted inside this app. Your originals stay where they are unless you choose to delete them after a successful import.</string>
+    <string name="restore_explain">Android does not let a normal app write silently into public folders such as Pictures or DCIM. Choose the folder where the decrypted copies should be saved (for example the folder the file came from). Restored files are normal, unencrypted files that other apps can see.</string>
+    <string name="apps_title">Private app list</string>
+    <string name="apps_info">This list is for your own organisation and reference only. On Android 9 (Huawei EMUI 9.1) a normal app cannot hide, remove or disable other apps, so every app stays visible on the Huawei Home Screen and App Drawer. This screen only shows the launcher apps installed on the phone and lets you tick the ones you want in a private reference list, stored encrypted inside this app. Tap an app to open it. Nothing is modified or monitored.</string>
+    <string name="pin_title_setup">Create vault PIN</string>
+    <string name="pin_title_change">Change vault PIN</string>
+    <string name="pin_info">Use 4 to 8 digits. To open the vault, type the PIN on the calculator and press =. There is no PIN recovery.</string>
+    <string name="privacy_title">Privacy information</string>
+    <string name="privacy_body">WHERE YOUR DATA LIVES\nEverything stays on this phone: the PIN check value, the encrypted files and your private app list. The app has no INTERNET permission, no analytics, no ads, no tracking and no hidden data collection. Android cloud backup is switched off for this app.\n\nPIN\nYour PIN is never stored. Only a salted PBKDF2-HMAC-SHA256 hash is kept, inside encrypted preferences protected by a key in the Android Keystore. Repeated wrong tries cause a temporary block.\n\nFILES\nImported files are encrypted with AES-256 (streaming AEAD from AndroidX Security / Tink) using a Keystore-protected master key, then stored in app-private storage. Every import is verified with a SHA-256 checksum before it is reported as successful. The key belongs to this phone, so encrypted files cannot be copied to another phone: use Restore to export normal copies.\n\nYOUR ORIGINALS\nImporting makes a copy. The original stays visible in Gallery or Files until you delete it. The app only offers to delete originals after a verified import and only after you confirm. Some storage providers refuse deletion by apps; in that case delete the originals yourself.\n\nTEMPORARY FILES\nVideos are decrypted to a temporary file in the app cache while playing. It is deleted when you close the viewer and again the next time the app starts. Files you Restore are ordinary unencrypted files.\n\nSCREENSHOTS\nVault screens block screenshots and hide their preview in the recent apps list.\n\nLIMITS\nThe PIN controls access through the app. The encryption key is protected by the Keystore, not derived from your PIN, so a rooted or compromised phone is weaker protection. This app cannot hide, remove, disable or monitor other apps, and it cannot hide anything from the Huawei launcher. If you uninstall the app or clear its data, the vault is permanently lost, so Restore anything you want to keep.</string>
+</resources>

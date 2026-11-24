@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1976D2</color>
+    <color name="primary_variant">#0D47A1</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F2F5F8</color>
+    <color name="text_primary">#263238</color>
+    <color name="text_secondary">#607D8B</color>
+    <color name="key_number">#ECEFF1</color>
+    <color name="key_number_text">#263238</color>
+    <color name="key_action">#CFD8DC</color>
+    <color name="key_action_text">#263238</color>
+    <color name="key_op">#1976D2</color>
+    <color name="key_op_text">#FFFFFF</color>
+    <color name="key_equals">#0D47A1</color>
+    <color name="ic_launcher_background">#263238</color>
+</resources>

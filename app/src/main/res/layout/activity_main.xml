@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:fitsSystemWindows="true"
+    android:orientation="vertical" android:padding="12dp">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start" android:padding="8dp"
+            android:text="@string/app_name" android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
+        <ImageButton android:id="@+id/btn_menu" android:layout_width="48dp" android:layout_height="48dp"
+            android:layout_gravity="end" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu" android:src="@drawable/ic_more_vert" />
+    </FrameLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="3" android:gravity="bottom|end" android:orientation="vertical"
+        android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingBottom="8dp">
+        <TextView android:id="@+id/tv_expression" android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="2" android:gravity="bottom|end" android:maxLines="2"
+            android:textColor="@color/text_primary" android:textSize="52sp"
+            android:autoSizeTextType="uniform" android:autoSizeMinTextSize="24sp" android:autoSizeMaxTextSize="56sp" />
+        <TextView android:id="@+id/tv_result" android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:gravity="center_vertical|end" android:maxLines="1"
+            android:textColor="@color/text_secondary" android:textSize="26sp"
+            android:autoSizeTextType="uniform" android:autoSizeMinTextSize="14sp" android:autoSizeMaxTextSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/keypad" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="5" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Action"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="C" android:text="C"
+            android:contentDescription="Clear" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Action"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="DEL" android:text="⌫"
+            android:contentDescription="Delete" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Action"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="%" android:text="%"
+            android:contentDescription="Percent" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Op"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="/" android:text="÷"
+            android:contentDescription="Divide" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="7" android:text="7" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="8" android:text="8" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="9" android:text="9" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Op"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="*" android:text="×"
+            android:contentDescription="Multiply" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="4" android:text="4" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="5" android:text="5" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="6" android:text="6" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Op"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="-" android:text="−"
+            android:contentDescription="Subtract" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="1" android:text="1" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="2" android:text="2" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="3" android:text="3" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Op"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="+" android:text="+"
+            android:contentDescription="Add" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2"
+            android:layout_margin="4dp" android:tag="0" android:text="0" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Number"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="." android:text="."
+            android:contentDescription="Decimal point" />
+            <com.google.android.material.button.MaterialButton style="@style/CalcButton.Equals"
+            android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+            android:layout_margin="4dp" android:tag="=" android:text="="
+            android:contentDescription="Equals" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
